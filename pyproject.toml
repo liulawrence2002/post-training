@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sitefacts"
+version = "0.1.0"
+description = "Post-train Inkling models on grounded geospatial site facts via the Tinker API."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "tinker-cookbook>=0.7.1,<0.8",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[project.scripts]
+sitefacts-sft = "sitefacts.train_sft:main"
+sitefacts-rl = "sitefacts.train_rl:main"
+sitefacts-eval = "sitefacts.evaluate:main"
+sitefacts-sample-data = "sitefacts.sample_data:main"
+sitefacts-fetch-samples = "sitefacts.fetch_public_samples:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
