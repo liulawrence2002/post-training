@@ -1,0 +1,23 @@
+{
+  "model_name": "thinkingmachines/Inkling-2-Mini",
+  "effort": 0.9,
+  "lora_rank": 32,
+  "batch_size": 2,
+  "group_size": 4,
+  "max_length": 16384,
+  "max_tokens": 8192,
+  "num_epochs": 1,
+  "max_steps": null,
+  "sft_learning_rate": null,
+  "rl_learning_rate": null,
+  "rl_lr_scale": 0.1,
+  "temperature": 1.0,
+  "max_turns": 4,
+  "remove_constant_reward_groups": true,
+  "eval_every": 0,
+  "save_every": 1,
+  "data_path": "data/sample/sites.jsonl",
+  "log_root": "runs",
+  "base_url": null,
+  "load_checkpoint_path": null
+}
